@@ -3,13 +3,15 @@
 > My <%= superb %> module
 
 
+<br>
 ## Install
 
 ```
-$ npm install --save <%= moduleName %>
+npm install --save <%= moduleName %>
 ```
 
 
+<br>
 ## Usage
 
 ```js
@@ -20,6 +22,7 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 ```
 
 
+<br>
 ## API
 
 ### <%= camelModuleName %>(input, [options])
@@ -40,6 +43,7 @@ Default: `false`
 Lorem ipsum.<% if (cli) { %>
 
 
+<br>
 ## CLI
 
 ```
@@ -63,6 +67,7 @@ $ <%= moduleName %> --help
 ```<% } %>
 
 
+<br>
 ## License
 
 MIT © [<%= name %>](<%= website %>)
