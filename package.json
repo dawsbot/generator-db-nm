@@ -1,13 +1,13 @@
 {
-  "name": "generator-nm",
-  "version": "2.4.0",
-  "description": "Scaffold out a node module",
+  "name": "generator-db-nm",
+  "version": "0.0.0",
+  "description": "Scaffold out a node module. Opinionated by saving and assuming even more information than the @sindresorhus module \"generator-nm\"",
   "license": "MIT",
-  "repository": "sindresorhus/generator-nm",
+  "repository": "dawsonbotsford/generator-db-nm",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "name": "Dawson Botsford",
+    "email": "dawsonbotsford@gmail.com",
+    "url": "dawsonbotsford.com"
   },
   "engines": {
     "node": ">=4"
@@ -29,7 +29,7 @@
     "node_module",
     "node-module",
     "init",
-    "sindre"
+    "daws"
   ],
   "dependencies": {
     "humanize-url": "^1.0.1",
@@ -40,15 +40,20 @@
   },
   "devDependencies": {
     "ava": "*",
+    "eslint": "^1.10.3",
+    "eslint-config-xo-space": "^0.8.0",
     "pify": "^2.2.0",
-    "xo": "*",
+    "xo": "^0.12.1",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
   "xo": {
     "esnext": true,
-    "ignores": [
-      "app/templates/**"
-    ]
+    "space": true,
+    "eslintConfig": {
+      "extends": "xo-space"
+    }
   }
+
+
 }

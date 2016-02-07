@@ -22,6 +22,7 @@
   ],
   "keywords": [<% if (cli) { %>
     "cli-app",
+    "dawson",
     "cli",<% } %>
     ""
   ],
@@ -30,6 +31,14 @@
   <% } %>},
   "devDependencies": {
     "ava": "^0.11.0",
-    "xo": "^0.12.1"
+    "xo": "^0.12.1",
+    "eslint-config-xo-space": "^0.8.0"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "eslintConfig": {
+      "extends": "xo-space"
+    }
   }
 }

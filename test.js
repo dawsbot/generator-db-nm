@@ -7,48 +7,48 @@ import pify from 'pify';
 let generator;
 
 test.beforeEach(async () => {
-	await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
-	generator = helpers.createGenerator('nm:app', ['../app'], null, {skipInstall: true});
+  await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
+  generator = helpers.createGenerator('opinionated-nm:app', ['../app'], null, {skipInstall: true});
 });
 
 test.serial('generates expected files', async () => {
-	helpers.mockPrompt(generator, {
-		moduleName: 'test',
-		githubUsername: 'test',
-		website: 'test.com',
-		cli: false
-	});
+  helpers.mockPrompt(generator, {
+    moduleName: 'test',
+    githubUsername: 'test',
+    website: 'test.com',
+    cli: false
+  });
 
-	await pify(generator.run.bind(generator))();
+  await pify(generator.run.bind(generator))();
 
-	assert.file([
-		'.editorconfig',
-		'.git',
-		'.gitattributes',
-		'.gitignore',
-		'.travis.yml',
-		'index.js',
-		'license',
-		'package.json',
-		'readme.md',
-		'test.js'
-	]);
+  assert.file([
+    '.editorconfig',
+    '.git',
+    '.gitattributes',
+    '.gitignore',
+    '.travis.yml',
+    'index.js',
+    'license',
+    'package.json',
+    'readme.md',
+    'test.js'
+  ]);
 
-	assert.noFile('cli.js');
+  assert.noFile('cli.js');
 });
 
 test.serial('CLI option', async () => {
-	helpers.mockPrompt(generator, {
-		moduleName: 'test',
-		githubUsername: 'test',
-		website: 'test.com',
-		cli: true
-	});
+  helpers.mockPrompt(generator, {
+    moduleName: 'test',
+    githubUsername: 'test',
+    website: 'test.com',
+    cli: true
+  });
 
-	await pify(generator.run.bind(generator))();
+  await pify(generator.run.bind(generator))();
 
-	assert.file('cli.js');
-	assert.fileContent('package.json', /"bin":/);
-	assert.fileContent('package.json', /"bin": "cli.js"/);
-	assert.fileContent('package.json', /"meow"/);
+  assert.file('cli.js');
+  assert.fileContent('package.json', /"bin":/);
+  assert.fileContent('package.json', /"bin": "cli.js"/);
+  assert.fileContent('package.json', /"meow"/);
 });
