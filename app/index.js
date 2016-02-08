@@ -9,7 +9,6 @@ module.exports = yeoman.Base.extend({
     const self = this;
     const githubUsername = 'dawsonbotsford';
     const website = 'http://dawsonbotsford.com';
-    let githubUrl = '';
 
     this.prompt([{
       name: 'moduleName',
@@ -35,7 +34,6 @@ module.exports = yeoman.Base.extend({
         email: self.user.git.email(),
         website: website,
         humanizedWebsite: humanizeUrl(website),
-        githubUrl: `https://github.com/${githubUsername}/${props.moduleName}`,
         cli: props.cli
       };
 
@@ -68,6 +66,6 @@ module.exports = yeoman.Base.extend({
     this.installDependencies({bower: false});
   },
   github_remote() {
-    this.spawnCommandSync('git', ['remote', 'set-url', 'origin', this.githubUrl]);
+    this.spawnCommandSync('open', ['https://github.com/new']);
   },
 });
