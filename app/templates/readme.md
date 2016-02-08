@@ -4,6 +4,7 @@
 
 
 <br>
+
 ## Install
 
 ```
@@ -12,6 +13,7 @@ npm install --save <%= moduleName %>
 
 
 <br>
+
 ## Usage
 
 ```js
@@ -23,15 +25,30 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 
 
 <br>
+
 ## API
 
-### <%= camelModuleName %>(input, [options])
+### <%= camelModuleName %>(pattern, target)
 
-#### input
+##### pattern
 
 Type: `string`
 
-Lorem ipsum.
+##### target
+
+Type: `string` || `Array`
+
+Removes all **exact occurences** of pattern in target
+
+<br>
+
+### <%= camelModuleName %>.secondThing(input, [options])
+
+##### input
+
+Type: `string`
+
+secondThing does a specific thing to input
 
 #### options
 
