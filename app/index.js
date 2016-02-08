@@ -1,6 +1,4 @@
 'use strict';
-const superb = require('superb');
-const normalizeUrl = require('normalize-url');
 const humanizeUrl = require('humanize-url');
 const yeoman = require('yeoman-generator');
 const _s = require('underscore.string');
@@ -11,6 +9,7 @@ module.exports = yeoman.Base.extend({
     const self = this;
     const githubUsername = 'dawsonbotsford';
     const website = 'http://dawsonbotsford.com';
+    let githubUrl = '';
 
     this.prompt([{
       name: 'moduleName',
@@ -18,20 +17,25 @@ module.exports = yeoman.Base.extend({
     default: this.appname.replace(/\s/g, '-'),
       filter: x => _s.slugify(x)
     }, {
+      name: 'description',
+      message: 'What description do you want to use for your module?'
+    },
+    {
       name: 'cli',
       message: 'Do you need a CLI?',
       type: 'confirm',
-    default: false
+      default: false
     }], props => {
       const tpl = {
         moduleName: props.moduleName,
         camelModuleName: _s.camelize(props.moduleName),
         githubUsername: githubUsername,
         name: self.user.git.name(),
+        description: props.description,
         email: self.user.git.email(),
         website: website,
         humanizedWebsite: humanizeUrl(website),
-        superb: superb(),
+        githubUrl: `https://github.com/${githubUsername}/${props.moduleName}`,
         cli: props.cli
       };
 
@@ -62,5 +66,8 @@ module.exports = yeoman.Base.extend({
   },
   install() {
     this.installDependencies({bower: false});
-  }
+  },
+  github_remote() {
+    this.spawnCommandSync('git', ['remote', 'set-url', 'origin', this.githubUrl]);
+  },
 });
