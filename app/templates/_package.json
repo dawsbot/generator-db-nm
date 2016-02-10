@@ -22,9 +22,8 @@
   ],
   "keywords": [<% if (cli) { %>
     "cli-app",
-    "dawson",
     "cli",<% } %>
-    ""
+    "dawson"
   ],
   "dependencies": {<% if (cli) { %>
     "meow": "^3.7.0"
