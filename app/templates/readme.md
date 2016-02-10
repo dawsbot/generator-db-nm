@@ -54,13 +54,14 @@ secondThing does a specific thing to input
 
 ##### foo
 
-Type: `boolean`<br>
+Type: `boolean`
 Default: `false`
 
 Lorem ipsum.<% if (cli) { %>
 
 
 <br>
+
 ## CLI
 
 ```
@@ -85,6 +86,7 @@ $ <%= moduleName %> --help
 
 
 <br>
+
 ## License
 
 MIT © [<%= name %>](<%= website %>)
