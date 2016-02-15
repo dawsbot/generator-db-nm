@@ -18,8 +18,10 @@ module.exports = yeoman.Base.extend({
     }, {
       name: 'description',
       message: 'What description do you want to use for your module?'
-    },
-    {
+    }, {
+      name: 'argLength',
+      message: 'How many args do you want your main function to have?'
+    },{
       name: 'cli',
       message: 'Do you need a CLI?',
       type: 'confirm',
@@ -34,9 +36,9 @@ module.exports = yeoman.Base.extend({
         email: self.user.git.email(),
         website: website,
         humanizedWebsite: humanizeUrl(website),
-        cli: props.cli
+        cli: props.cli,
+        argLength: props.argLength
       };
-
       const mv = (from, to) => {
         self.fs.move(self.destinationPath(from), self.destinationPath(to));
       };

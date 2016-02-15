@@ -3,18 +3,26 @@
   "version": "0.0.0",
   "description": "<%= description %>",
   "license": "MIT",
-  "repository": "<%= githubUsername %>/<%= moduleName %>",
+  "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= githubUsername %>/<%= moduleName %>.git"
+  },
   "author": {
     "name": "<%= name %>",
     "email": "<%= email %>",
     "url": "<%= humanizedWebsite %>"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
   },<% if (cli) { %>
   "bin": "cli.js",<% } %>
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "ava": "nodemon --exec ava"
   },
   "files": [
     "index.js"<% if (cli) { %>,
@@ -23,6 +31,9 @@
   "keywords": [<% if (cli) { %>
     "cli-app",
     "cli",<% } %>
+    "documented",
+    "tested",
+    "ava",
     "dawson"
   ],
   "dependencies": {<% if (cli) { %>
@@ -34,7 +45,6 @@
     "eslint-config-xo-space": "^0.8.0"
   },
   "xo": {
-    "esnext": true,
     "space": true,
     "eslintConfig": {
       "extends": "xo-space"
