@@ -22,22 +22,23 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 //=> 'unicorns & rainbows'
 ```
 
-
 <br>
 
 ## API
 
-### <%= camelModuleName %>(pattern, target)
-
-##### pattern
-
-Type: `string`
+### <%= camelModuleName %>(target)
 
 ##### target
 
+<<<<<<< 3daa72ff00831b5f13eeac7475b2a216e20236fe
 Type: `string` || `Array`
 
 Removes all **exact occurences** of pattern in target
+=======
+Type: `string`
+
+<%= description %>
+>>>>>>> maybe fixed
 
 <br>
 
@@ -68,4 +69,4 @@ $ <%= moduleName %> --help
 
 ## License
 
-[WTFPL-2.0](https://tldrlegal.com/license/do-wtf-you-want-to-public-license-v2-(wtfpl-2.0)#summary) [<%= name %>](<%= website %>)
+[Do What The F*ck You Want To License](https://www.tldrlegal.com/l/wtfpl) © [<%= name %>](<%= website %>)
