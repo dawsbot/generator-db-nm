@@ -13,7 +13,7 @@ module.exports = yeoman.Base.extend({
     this.prompt([{
       name: 'moduleName',
       message: 'What do you want to name your module?',
-    default: this.appname.replace(/\s/g, '-'),
+      default: this.appname.replace(/\s/g, '-'),
       filter: x => _s.slugify(x)
     }, {
       name: 'description',
@@ -21,7 +21,7 @@ module.exports = yeoman.Base.extend({
     }, {
       name: 'argLength',
       message: 'How many args do you want your main function to have?'
-    },{
+    }, {
       name: 'cli',
       message: 'Do you need a CLI?',
       type: 'confirm',
@@ -67,7 +67,7 @@ module.exports = yeoman.Base.extend({
   install() {
     this.installDependencies({bower: false});
   },
-  github_remote() {
+  githubRemote() {
     this.spawnCommandSync('open', ['https://github.com/new']);
-  },
+  }
 });
