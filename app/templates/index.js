@@ -1,11 +1,14 @@
 'use strict';
-module.exports = function (arg1) {
+module.exports = function () {
+  const argLength = arguments.length;
+  /*
   if (typeof arg1 !== 'string') {
     throw new TypeError(`Expected a string, got ${typeof arg1}`);
   }
-  if (arguments.length !== <%= argLength %>) {
-    throw new Error(`Expected <%= argLength %> arguments, got ${arguments.length}`);
+  */
+  if (argLength !== <%= argLength %>) {
+    throw new Error(`Expected <%= argLength %> arguments, got ${argLength}`);
   }
 
-  return `${arg1} & ${arguments.length}`;
+  return `${arguments[0]} & ${argLength}`;
 };

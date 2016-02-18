@@ -1,7 +1,6 @@
-# <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>) [![npm version](https://badge.fury.io/js/<%= moduleName %>.svg)](https://badge.fury.io/js/<%= moduleName %>)
+# <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>) [![npm](https://img.shields.io/npm/v/<%= moduleName %>.svg)](https://www.npmjs.com/package/<%= moduleName %>)
 
 > <%= description %>
-
 
 <br>
 
@@ -39,26 +38,6 @@ Type: `string`
 Type: `string` || `Array`
 
 Removes all **exact occurences** of pattern in target
-
-<br>
-
-### <%= camelModuleName %>.secondThing(input, [options])
-
-##### input
-
-Type: `string`
-
-secondThing does a specific thing to input
-
-#### options
-
-##### foo
-
-Type: `boolean`
-Default: `false`
-
-Lorem ipsum.<% if (cli) { %>
-
 
 <br>
 
