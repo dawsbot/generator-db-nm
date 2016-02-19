@@ -66,4 +66,4 @@ $ <%= moduleName %> --help
 
 ## License
 
-[WTFPL-2.0](https://tldrlegal.com/l/wtfpl) © [<%= name %>](<%= website %>)
+[Do What The F*ck You Want To Public License v2 (WTFPL-2.0)](https://tldrlegal.com/l/wtfpl) © [Dawson Botsford](http://dawsonbotsford.com)
