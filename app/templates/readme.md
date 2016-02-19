@@ -1,4 +1,7 @@
-# <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>) [![npm](https://img.shields.io/npm/v/<%= moduleName %>.svg)](https://www.npmjs.com/package/<%= moduleName %>)
+# <%= moduleName %>
+[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
+[![NPM downloads](http://img.shields.io/npm/dm/<%= moduleName =>.svg?style=flat)](http://npmjs.org/<%= moduleName =>)
+[![npm](https://img.shields.io/npm/v/<%= moduleName %>.svg)](https://www.npmjs.com/package/<%= moduleName %>)
 
 > <%= description %>
 
@@ -18,9 +21,10 @@ npm install --save <%= moduleName %>
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
 
-<%= camelModuleName %>('unicorns');
-//=> 'unicorns & rainbows'
+<%= camelModuleName %>('hackathons');
+//=> 'hackathons & rainbows'
 ```
+
 
 <br>
 
@@ -30,17 +34,11 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 
 ##### target
 
-<<<<<<< 3daa72ff00831b5f13eeac7475b2a216e20236fe
 Type: `string` || `Array`
 
-Removes all **exact occurences** of pattern in target
-=======
-Type: `string`
-
 <%= description %>
->>>>>>> maybe fixed
 
-<br>
+<br><% if (cli) { %>
 
 ## CLI
 
@@ -59,14 +57,13 @@ $ <%= moduleName %> --help
 
   Examples
     $ <%= moduleName %>
-    unicorns & rainbows
+    hackathons & rainbows
     $ <%= moduleName %> ponies
     ponies & rainbows
-```<% } %>
-
 
 <br>
+```<% } %>
 
 ## License
 
-[Do What The F*ck You Want To License](https://www.tldrlegal.com/l/wtfpl) © [<%= name %>](<%= website %>)
+[WTFPL-2.0](https://tldrlegal.com/l/wtfpl) [<%= name %>](<%= website %>)

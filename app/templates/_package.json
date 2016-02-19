@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "xo && ava",
-    "ava": "nodemon --exec ava"
+    "ava": "ava"
   },
   "files": [
     "index.js"<% if (cli) { %>,
