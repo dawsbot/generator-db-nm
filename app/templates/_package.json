@@ -33,8 +33,13 @@
   "keywords": [<% if (cli) { %>
     "cli-app",
     "cli",<% } %>
+    "wtf",
+    "wtfpl",
+    "lean",
+    "minimal",
     "documented",
     "tested",
+    "licensed",
     "ava",
     "dawson"
   ],

@@ -66,4 +66,4 @@ $ <%= moduleName %> --help
 
 ## License
 
-[WTFPL-2.0](https://tldrlegal.com/l/wtfpl) [<%= name %>](<%= website %>)
+[WTFPL-2.0](https://tldrlegal.com/l/wtfpl) © [<%= name %>](<%= website %>)
