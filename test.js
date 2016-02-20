@@ -42,7 +42,7 @@ test.serial('CLI option', async () => {
     moduleName: 'test',
     description: 'desc',
     argLength: 2,
-    cli: false
+    cli: true
   });
 
   await pify(generator.run.bind(generator))();
