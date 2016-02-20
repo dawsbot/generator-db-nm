@@ -2,6 +2,7 @@
 const humanizeUrl = require('humanize-url');
 const yeoman = require('yeoman-generator');
 const _s = require('underscore.string');
+const fs = require('fs');
 
 module.exports = yeoman.Base.extend({
   init() {
@@ -17,10 +18,12 @@ module.exports = yeoman.Base.extend({
       filter: x => _s.slugify(x)
     }, {
       name: 'description',
-      message: 'What description do you want to use for your module?'
+      message: 'What description do you want to use for your module?',
+      default: 'descrr'
     }, {
       name: 'argLength',
-      message: 'How many args do you want your main function to have?'
+      message: 'How many args do you want your main function to have?',
+      default: 1
     }, {
       name: 'cli',
       message: 'Do you need a CLI?',
@@ -41,6 +44,9 @@ module.exports = yeoman.Base.extend({
       };
       const mv = (from, to) => {
         self.fs.move(self.destinationPath(from), self.destinationPath(to));
+      };
+      const cp = (from, to) => {
+        self.fs.copy(self.destinationPath(from), self.destinationPath(to));
       };
 
       self.fs.copyTpl([
@@ -64,7 +70,12 @@ module.exports = yeoman.Base.extend({
   git() {
     this.spawnCommandSync('git', ['init']);
   },
+  gitOpen() {
+    this.spawnCommandSync('open', ['https://github.com/new']);
+    // this.spawnCommandSync('mv', ['github', '.github']);
+  },
   install() {
     this.installDependencies({bower: false});
+    fs.renameSync('github', '.github');
   }
 });
