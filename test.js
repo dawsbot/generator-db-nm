@@ -8,14 +8,14 @@ let generator;
 
 test.beforeEach(async () => {
   await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
-  generator = helpers.createGenerator('opinionated-nm:app', ['../app'], null, {skipInstall: true});
+  generator = helpers.createGenerator('db-nm:app', ['../app'], null, {skipInstall: true});
 });
 
 test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    githubUsername: 'test',
-    website: 'test.com',
+    description: 'desc',
+    argLength: 2,
     cli: false
   });
 
@@ -30,7 +30,8 @@ test.serial('generates expected files', async () => {
     'index.js',
     'package.json',
     'readme.md',
-    'test.js'
+    'test.js',
+    '.github/issue_template.md'
   ]);
 
   assert.noFile('cli.js');
@@ -39,9 +40,9 @@ test.serial('generates expected files', async () => {
 test.serial('CLI option', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    githubUsername: 'test',
-    website: 'test.com',
-    cli: true
+    description: 'desc',
+    argLength: 2,
+    cli: false
   });
 
   await pify(generator.run.bind(generator))();
