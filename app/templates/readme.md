@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
 [![npm download count](http://img.shields.io/npm/dm/<%= moduleName %>.svg?style=flat)](http://npmjs.org/<%= moduleName %>)
 
-> <%= description %>
+> npm module to <%= description %>
 
 <br>
 
@@ -66,4 +66,8 @@ $ <%= moduleName %> --help
 
 ## License
 
-[Do What The F*ck You Want To Public License v2 (WTFPL-2.0)](https://tldrlegal.com/l/wtfpl) © [Dawson Botsford](http://dawsonbotsford.com)
+[MIT](https://tldrlegal.com/l/wtfpl) © [Dawson Botsford](http://dawsonbotsford.com)
+
+
+---
+If you like this, star it. If you want to follow me, follow me.
