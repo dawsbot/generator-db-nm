@@ -1,11 +1,12 @@
-Fixes #  
+Fixes issue #  
 
 
 <br>
 
 Changes proposed:  
+
 *  
-*
+*  
 
 <br>
 
