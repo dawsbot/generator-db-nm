@@ -2,7 +2,7 @@
   "name": "<%= moduleName %>",
   "version": "0.0.0",
   "description": "<%= description %>",
-  "license": "WTFPL",
+  "license": "MIT",
   "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
   "repository": {
     "type": "git",
