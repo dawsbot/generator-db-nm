@@ -59,8 +59,6 @@ $ <%= moduleName %> --help
   Examples
     $ <%= moduleName %>
     hackathons & rainbows
-    $ <%= moduleName %> ponies
-    ponies & rainbows
 
 <br>
 ```<% } %>

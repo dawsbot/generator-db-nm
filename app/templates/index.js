@@ -1,6 +1,8 @@
 'use strict';
 module.exports = function () {
   const argLength = arguments.length;
+
+  // validate arguments
   /*
   if (typeof arg1 !== 'string') {
     throw new TypeError(`Expected a string, got ${typeof arg1}`);
