@@ -4,9 +4,47 @@
 [![npm download count](http://img.shields.io/npm/dm/<%= moduleName %>.svg?style=flat)](http://npmjs.org/<%= moduleName %>)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> npm module to <%= description %>
+> <%= description %>
 
 <br>
+
+<% if (cli) { %>
+# CLI
+
+## Install
+
+```
+$ npm install -g <%= moduleName %>
+```
+
+## Usage
+
+```
+$ <%= moduleName %>
+
+```
+
+<br>
+
+More help
+
+```
+$ <%= moduleName %> --help
+
+  Usage
+    <%= moduleName %> [input]
+
+  Options
+    --foo  Lorem ipsum. [Default: false]
+
+  Examples
+    $ <%= moduleName %>
+    hackathons & rainbows
+
+<br>
+
+# Package
+```<% } %>
 
 ## Install
 
@@ -26,7 +64,6 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 //=> 'hackathons & rainbows'
 ```
 
-
 <br>
 
 ## API
@@ -39,34 +76,13 @@ Type: `string` || `Array`
 
 <%= description %>
 
-<br><% if (cli) { %>
-
-## CLI
-
-```
-$ npm install --global <%= moduleName %>
-```
-
-```
-$ <%= moduleName %> --help
-
-  Usage
-    <%= moduleName %> [input]
-
-  Options
-    --foo  Lorem ipsum. [Default: false]
-
-  Examples
-    $ <%= moduleName %>
-    hackathons & rainbows
-
 <br>
-```<% } %>
 
 ## License
 
 MIT © [Dawson Botsford](http://dawsonbotsford.com)
 
+<br>
 
 ---
 If you like this, star it. If you want to follow me, follow me.

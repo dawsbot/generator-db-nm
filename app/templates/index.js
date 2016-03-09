@@ -1,6 +1,7 @@
 'use strict';
 module.exports = function () {
   const argLength = arguments.length;
+  const arg1 = arguments[0];
 
   // validate arguments
   /*
@@ -12,5 +13,5 @@ module.exports = function () {
     throw new Error(`Expected <%= argLength %> arguments, got ${argLength}`);
   }
 
-  return `${arguments[0]} & ${argLength}`;
+  return `${arg1} & ${argLength}`;
 };
