@@ -29,6 +29,11 @@ module.exports = yeoman.Base.extend({
       message: 'Do you need a CLI?',
       type: 'confirm',
       default: false
+    }, {
+      name: 'appveyor',
+      message: 'Test with appveyor?',
+      type: 'confirm',
+      default: false
     }], props => {
       const tpl = {
         moduleName: props.moduleName,
@@ -40,6 +45,7 @@ module.exports = yeoman.Base.extend({
         website: website,
         humanizedWebsite: humanizeUrl(website),
         cli: props.cli,
+        appveyor: props.appveyor,
         argLength: props.argLength
       };
       const mv = (from, to) => {
