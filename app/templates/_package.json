@@ -32,7 +32,8 @@
   ],
   "keywords": [<% if (cli) { %>
     "cli-app",
-    "cli",<% } %>
+    "cli",<% } %><% if (appveyor) { %>
+    "windows",<% } %>
     "lean",
     "minimal",
     "documented",
