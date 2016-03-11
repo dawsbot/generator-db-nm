@@ -1,18 +1,18 @@
 import test from 'ava';
-import fn from './';
+import <%= camelModuleName %> from './';
 
 test('valid args', t => {
   t.pass();
   /*
   t.throws(() => {
-    fn();
+    <%= camelModuleName %>();
   }, TypeError);
   t.throws(() => {
-    fn();
+    <%= camelModuleName %>();
   }, Error);
   */
 });
 
 test('title', t => {
-  t.is(fn('myArg1'), `myArg1 & 1`);
+  t.is(<%= camelModuleName %>('myArg1'), `myArg1 & 1`);
 });
