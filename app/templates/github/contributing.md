@@ -9,7 +9,7 @@ Development from people like you makes projects great. In order to make cool thi
 <br>
 **PR's should be in response to an issue**. Please open an issue before posting your PR
 
-1. If the patch/pull requrest is small, hack it out and see if the community likes it.
+1. If the patch/pull request is small, hack it out and see if the community likes it.
 2. On the other hand, if it is large, ask me about it first. We don't want to see time wasted on things that won't get merged or are already underway
 
 <br>
@@ -18,14 +18,23 @@ Development from people like you makes projects great. In order to make cool thi
 * Lint with [xo](https://github.com/sindresorhus/xo)
 * Test with [ava](https://github.com/sindresorhus/ava)
 
-Keep in mind that all of this configuration is already done for you, so setup your workflow to lint with xo and you're ready!
-
 ```js
-npm test
+npm test // performs both xo linting and ava testing
 ```
 
 <br>
 
-If you have any doubts just reach out and say "oh hai".
+The `xo` and `ava` commands are also decoupled via their respective `npm run` variants:
+```js
+npm run xo
+
+// or
+
+npm run ava
+```
+
+<br>
+
+Reach out with questions!
 
 Cheers! :beers:
