@@ -89,7 +89,11 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 
 ##### target
 
-Type: `string` || `Array`
+Type: `string`
+
+#### returns
+
+Type: `string`
 
 <%= description %>
 
