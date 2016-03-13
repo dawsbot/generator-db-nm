@@ -13,9 +13,9 @@ const cli = meow([
   '',
   'Examples',
   '  $ <%= moduleName %>',
-  '  unicorns & rainbows'
+  '  hackathons'
 ]);
 
-updateNotifier({pkg: cli.pkg}).notify();
+updateNotifier({pkg: cli.pkg, updateCheckInterval: 3600000}).notify();
 
 console.log(<%= camelModuleName %>(cli.input[0] || 'unicorns'));
