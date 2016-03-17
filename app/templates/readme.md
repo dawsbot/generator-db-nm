@@ -74,12 +74,28 @@ npm install --save <%= moduleName %>
 
 ## Usage
 
+<% if(bundle) {%>
+#### Node
+<% } %>
+
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
 
 <%= camelModuleName %>('hackathons');
 //=> 'hackathons & rainbows'
 ```
+
+<% if(bundle) {%>
+#### Web
+
+```html
+<script src="https://rawgit.com/dawsonbotsford/<% moduleName %>/master/bundle.js"></script>
+<script>
+  alert(<%= camelModuleName %>('hackathons'));
+  //=> 'hackathons & rainbows'
+</script>
+```
+<% } %>
 
 <br>
 
