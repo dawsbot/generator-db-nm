@@ -34,6 +34,11 @@ module.exports = yeoman.Base.extend({
       message: 'Test with appveyor?',
       type: 'confirm',
       default: true
+    }, {
+      name: 'bundle',
+      message: 'Create a web bundle?',
+      type: 'confirm',
+      default: true
     }], props => {
       const tpl = {
         moduleName: props.moduleName,
@@ -46,6 +51,7 @@ module.exports = yeoman.Base.extend({
         humanizedWebsite: humanizeUrl(website),
         cli: props.cli,
         appveyor: props.appveyor,
+        bundle: props.bundle,
         argLength: props.argLength
       };
       const mv = (from, to) => {
