@@ -33,7 +33,7 @@ module.exports = yeoman.Base.extend({
       name: 'appveyor',
       message: 'Test with appveyor?',
       type: 'confirm',
-      default: false
+      default: true
     }], props => {
       const tpl = {
         moduleName: props.moduleName,
