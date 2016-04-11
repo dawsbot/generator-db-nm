@@ -1,7 +1,6 @@
 # <%= moduleName %>
 [![npm version](https://img.shields.io/npm/v/<%= moduleName %>.svg)](https://www.npmjs.com/package/<%= moduleName %>)
-<% if (!appveyor) { %>
-[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
+<% if (!appveyor) { %>[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
 <% } %>[![npm download count](http://img.shields.io/npm/dm/<%= moduleName %>.svg?style=flat)](http://npmjs.org/<%= moduleName %>)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 <% if (appveyor) { %>
@@ -74,52 +73,54 @@ npm install --save <%= moduleName %>
 
 ## Usage
 
-<% if(bundle) {%>
-#### Node
+<% if(bundle) {%>#### Node
 <% } %>
 
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
 
 <%= camelModuleName %>('hackathons');
-//=> 'hackathons & rainbows'
+//=> 'hackathons'
 ```
+<% if(bundle) {%><br>
 
-<% if(bundle) {%>
 #### Web
 
 ```html
-<script src="https://rawgit.com/dawsonbotsford/<% moduleName %>/master/bundle.js"></script>
+<script src="https://rawgit.com/dawsonbotsford/<%= moduleName %>/master/bundle.js"></script>
 <script>
   alert(<%= camelModuleName %>('hackathons'));
-  //=> 'hackathons & rainbows'
+  //=> 'hackathons'
 </script>
 ```
-<% } %>
 
 <br>
+
+Alternatively, you can install the npm module and reference the bundle within `node_modules`
+
+```html
+<script src="<path to node_modules>/<%= moduleName %>/bundle.js"></script>
+```
+<% } %><br>
 
 ## API
 
 ### <%= camelModuleName %>(target)
 
-##### target
+<br>
+
+#### target
 
 Type: `string`
+
+<br>
 
 #### returns
 
 Type: `string`
-
-<%= description %>
 
 <br>
 
 ## License
 
 MIT © [Dawson Botsford](http://dawsonbotsford.com)
-
-<br>
-
----
-If you like this, star it. If you want to follow me, follow me.
