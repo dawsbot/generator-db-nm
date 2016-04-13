@@ -25,7 +25,7 @@
   "scripts": {
     "test": "xo && ava",<% if (bundle) { %>
     "bundle": "browserify index.js -s <% camelModuleName %> -t [ babelify --presets [ es2015 ] ] | uglifyjs > bundle.js",
-    "precommit": "npm test && npm run bundle <% } %>"
+    "precommit": "npm test && npm run bundle "<% } %>
   },
   "files": [
     "index.js"<% if (cli) { %>,
