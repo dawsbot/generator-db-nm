@@ -66,8 +66,8 @@ module.exports = yeoman.Base.extend({
         '!**/cli.js'
       ], self.destinationPath(), tpl);
 
-      if (props.cli) {
-        self.fs.copyTpl(self.templatePath('cli.js'), self.destinationPath('cli.js'), tpl);
+      if (!props.cli) {
+        rm('src/cli.js');
       }
 
       mv('editorconfig', '.editorconfig');
@@ -84,10 +84,9 @@ module.exports = yeoman.Base.extend({
   },
   gitOpen() {
     this.spawnCommandSync('open', ['https://github.com/new']);
-    // this.spawnCommandSync('mv', ['github', '.github']);
   },
   install() {
     this.installDependencies({bower: false});
-    fs.renameSync('github', '.github');
+    // fs.renameSync('github', '.github');
   }
 });
