@@ -1,5 +1,5 @@
 import test from 'ava';
-import <%= camelModuleName %> from './';
+import <%= camelModuleName %> from '../src';
 
 test('valid args', t => {
   t.pass();
@@ -14,5 +14,5 @@ test('valid args', t => {
 });
 
 test('title', t => {
-  t.is(<%= camelModuleName %>('myArg1'), `myArg1 & 1`);
+  t.is(<%= camelModuleName %>('myArg1'), 'myArg1 & 1');
 });
