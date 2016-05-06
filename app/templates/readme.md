@@ -39,7 +39,6 @@ $ npm install -g <%= moduleName %>
 
 ```
 $ <%= moduleName %>
-
 ```
 
 <br>
@@ -72,10 +71,8 @@ npm install --save <%= moduleName %>
 <br>
 
 ## Usage
-
 <% if(bundle) {%>#### Node
 <% } %>
-
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
 
