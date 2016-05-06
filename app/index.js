@@ -3,6 +3,7 @@ const humanizeUrl = require('humanize-url');
 const yeoman = require('yeoman-generator');
 const _s = require('underscore.string');
 const fs = require('fs');
+const sh = require('shelljs');
 
 module.exports = yeoman.Base.extend({
   init() {
@@ -67,7 +68,7 @@ module.exports = yeoman.Base.extend({
       ], self.destinationPath(), tpl);
 
       if (!props.cli) {
-        rm('src/cli.js');
+        shell.rm('src/cli.js');
       }
 
       mv('editorconfig', '.editorconfig');

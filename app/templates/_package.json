@@ -67,5 +67,10 @@
   },
   "xo": {
     "space": true
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
