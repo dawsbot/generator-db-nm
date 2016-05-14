@@ -60,6 +60,7 @@
     "husky": "^0.11.3"<% } %>
   },
   "xo": {
-    "space": true
+    "space": true,
+    "esnext": true
   }
 }
