@@ -57,9 +57,6 @@ module.exports = yeoman.Base.extend({
       const mv = (from, to) => {
         self.fs.move(self.destinationPath(from), self.destinationPath(to));
       };
-      const cp = (from, to) => {
-        self.fs.copy(self.destinationPath(from), self.destinationPath(to));
-      };
 
       self.fs.copyTpl([
         `${self.templatePath()}/**`,
