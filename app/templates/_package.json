@@ -48,7 +48,7 @@
   ],
   "dependencies": {<% if (cli) { %>
     "meow": "^3.7.0",
-    "update-notifier": "^0.6.1"
+    "update-notifier": "^0.7.0"
   <% } %>},
   "devDependencies": {
     "ava": "^0.14.0",
@@ -60,7 +60,6 @@
     "husky": "^0.11.3"<% } %>
   },
   "xo": {
-    "space": true,
-    "esnext": true
+    "space": true
   }
 }
