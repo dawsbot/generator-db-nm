@@ -41,18 +41,12 @@
   "devDependencies": {
     "ava": "*",
     "eslint": "^1.10.3",
-    "eslint-config-xo-space": "^0.8.0",
     "pify": "^2.2.0",
-    "xo": "^0.12.1",
+    "xo": "^0.15.1",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
   "xo": {
-    "extends": "xo/esnext",
-    "esnext": true,
-    "space": true,
-    "eslintConfig": {
-      "extends": "xo-space"
-    }
+    "space": true
   }
 }
