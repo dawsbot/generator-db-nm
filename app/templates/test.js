@@ -1,7 +1,7 @@
 import test from 'ava';
 import <%= camelModuleName %> from './';
 
-test('valid args', t => {
+test('invalid arg handling', t => {
   t.throws(() => {
     <%= camelModuleName %>();
   }, TypeError);
