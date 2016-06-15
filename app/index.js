@@ -3,7 +3,7 @@ const humanizeUrl = require('humanize-url');
 const yeoman = require('yeoman-generator');
 const _s = require('underscore.string');
 const fs = require('fs');
-const sh = require('shelljs');
+const shelljs = require('shelljs');
 
 module.exports = yeoman.Base.extend({
   init() {
@@ -68,7 +68,7 @@ module.exports = yeoman.Base.extend({
       ], self.destinationPath(), tpl);
 
       if (!props.cli) {
-        shell.rm('src/cli.js');
+        shelljs.rm('src/cli.js');
       }
 
       mv('editorconfig', '.editorconfig');
@@ -83,11 +83,7 @@ module.exports = yeoman.Base.extend({
   git() {
     this.spawnCommandSync('git', ['init']);
   },
-  gitOpen() {
-    this.spawnCommandSync('open', ['https://github.com/new']);
-  },
   install() {
     this.installDependencies({bower: false});
-    // fs.renameSync('github', '.github');
   }
 });

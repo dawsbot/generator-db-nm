@@ -20,7 +20,7 @@
     "<%= moduleName %>": "cli.js"
   },<% } %>
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "build": "<% if (bundle) { %>npm run browser && <% } %>npm run babel && npm run minify",
@@ -55,7 +55,7 @@
     "update-notifier": "^0.6.1"
   <% } %>},
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.15.2",
     "husky": "^0.11.4",
     "uglify-js": "^2.6.2",
     "xo": "^0.14.0"<% if (bundle) { %>,
