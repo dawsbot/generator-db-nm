@@ -71,7 +71,7 @@ npm install --save <%= moduleName %>
 <br>
 
 ## Usage
-<% if(bundle) {%>#### Node
+<% if(web) {%>#### Node
 <% } %>
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
@@ -79,12 +79,12 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 <%= camelModuleName %>('hackathons');
 //=> 'hackathons'
 ```
-<% if(bundle) {%><br>
+<% if(web) {%><br>
 
 #### Web
 
 ```html
-<script src="https://rawgit.com/dawsonbotsford/<%= moduleName %>/master/bundle.js"></script>
+<script src="https://rawgit.com/dawsonbotsford/<%= moduleName %>/master/dist/bundle.js"></script>
 <script>
   alert(<%= camelModuleName %>('hackathons'));
   //=> 'hackathons'
@@ -96,7 +96,7 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 Alternatively, you can install the npm module and reference the bundle within `node_modules`
 
 ```html
-<script src="<path to node_modules>/<%= moduleName %>/bundle.js"></script>
+<script src="<path to node_modules>/<%= moduleName %>/dist/bundle.js"></script>
 ```
 <% } %><br>
 

@@ -22,10 +22,6 @@ module.exports = yeoman.Base.extend({
       message: 'What description do you want to use for your module?',
       default: 'descrr'
     }, {
-      name: 'argLength',
-      message: 'How many args do you want your main function to have?',
-      default: 1
-    }, {
       name: 'cli',
       message: 'Do you need a CLI?',
       type: 'confirm',
@@ -36,7 +32,7 @@ module.exports = yeoman.Base.extend({
       type: 'confirm',
       default: true
     }, {
-      name: 'bundle',
+      name: 'web',
       message: 'Create a web bundle?',
       type: 'confirm',
       default: true
@@ -52,7 +48,7 @@ module.exports = yeoman.Base.extend({
         humanizedWebsite: humanizeUrl(website),
         cli: props.cli,
         appveyor: props.appveyor,
-        bundle: props.bundle,
+        web: props.web,
         argLength: props.argLength
       };
       const mv = (from, to) => {
@@ -68,7 +64,7 @@ module.exports = yeoman.Base.extend({
       ], self.destinationPath(), tpl);
 
       if (!props.cli) {
-        shelljs.rm('src/cli.js');
+        shelljs.rm('lib/cli.js');
       }
 
       mv('editorconfig', '.editorconfig');
