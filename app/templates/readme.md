@@ -30,13 +30,13 @@
 
 ## Install
 
-```
-$ npm install -g <%= moduleName %>
+```sh
+$ npm install --global <%= moduleName %>
 ```
 
 ## Usage
 
-```
+```sh
 $ <%= moduleName %>
 
 ```
@@ -45,7 +45,7 @@ $ <%= moduleName %>
 
 More help
 
-```
+```sh
 $ <%= moduleName %> --help
 
   Usage
@@ -73,7 +73,8 @@ npm install --save <%= moduleName %>
 ## Usage
 <% if(bundle) {%>
 #### Node
-<% } %>
+
+<% } -%>
 
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
@@ -81,7 +82,8 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 <%= camelModuleName %>('hackathons');
 //=> 'hackathons'
 ```
-<% if(bundle) {%><br>
+<% if(bundle) { -%>
+<br>
 
 #### Web
 
@@ -95,10 +97,10 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 
 <br>
 
-Alternatively, you can install the npm module and reference the bundle within `node_modules`
+Alternatively, you can install the browser bundle and reference it in `node_modules`
 
 ```html
-<script src="<path to node_modules>/<%= moduleName %>/bundle.js"></script>
+<script src="<path to node_modules>/node_modules/<%= moduleName %>/bundle.js"></script>
 ```
 <% } %><br>
 
