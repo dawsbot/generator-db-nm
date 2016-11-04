@@ -4,18 +4,22 @@ const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const <%= camelModuleName %> = require('./');
 
-const cli = meow([
+const cli = meow(
   `Usage
     $ <%= moduleName %> [input]
 
   Options
-    --foo  Lorem ipsum. [Default: false]
+    --dry  run without executing command. [Default: false]
 
   Examples
     $ <%= moduleName %>
       hackathons`
-]);
+, {
+  alias: {
+    d: 'dry'
+  }
+});
 
-updateNotifier({pkg: cli.pkg, updateCheckInterval: 3600000}).notify();
+updateNotifier({pkg: cli.pkg}).notify();
 
 console.log(<%= camelModuleName %>(cli.input[0] || 'unicorns'));
