@@ -1,6 +1,6 @@
 {
   "name": "generator-db-nm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scaffold out a node module. Opinionated by saving and assuming even more information than the @sindresorhus module \"generator-nm\"",
   "license": "MIT",
   "repository": "dawsonbotsford/generator-db-nm",
