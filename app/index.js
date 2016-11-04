@@ -83,6 +83,5 @@ module.exports = yeoman.Base.extend({
   },
   install() {
     this.installDependencies({bower: false});
-    fs.renameSync('github', '.github');
   }
 });
