@@ -24,7 +24,6 @@
 <% } %>
 > <%= description %>
 
-<br>
 <% if (cli) { %>
 # CLI
 
@@ -41,8 +40,6 @@ $ <%= moduleName %>
 
 ```
 
-<br>
-
 More help
 
 ```sh
@@ -58,8 +55,6 @@ $ <%= moduleName %> --help
     $ <%= moduleName %>
     hackathons & rainbows
 
-<br>
-
 # Package
 ```<% } %>
 ## Install
@@ -67,8 +62,6 @@ $ <%= moduleName %> --help
 ```
 npm install --save <%= moduleName %>
 ```
-
-<br>
 
 ## Usage
 <% if(bundle) {%>
@@ -83,7 +76,6 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 //=> 'hackathons'
 ```
 <% if(bundle) { -%>
-<br>
 
 #### Web
 
@@ -95,32 +87,24 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 </script>
 ```
 
-<br>
-
 Alternatively, you can install the browser bundle and reference it in `node_modules`
 
 ```html
 <script src="<path to node_modules>/node_modules/<%= moduleName %>/bundle.js"></script>
 ```
-<% } %><br>
+<% } %>
 
 ## API
 
 ### <%= camelModuleName %>(target)
 
-<br>
-
 #### target
 
 Type: `string`
 
-<br>
-
 #### returns
 
 Type: `string`
-
-<br>
 
 ## License
 
