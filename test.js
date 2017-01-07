@@ -15,7 +15,6 @@ test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     description: 'desc',
-    argLength: 2,
     cli: false
   });
 
@@ -30,8 +29,7 @@ test.serial('generates expected files', async () => {
     'index.js',
     'package.json',
     'readme.md',
-    'test.js',
-    '.github/issue_template.md'
+    'test.js'
   ]);
 
   assert.noFile('cli.js');
@@ -41,14 +39,15 @@ test.serial('CLI option', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     description: 'desc',
-    argLength: 2,
     cli: true
   });
 
   await pify(generator.run.bind(generator))();
 
   assert.file('cli.js');
-  assert.fileContent('package.json', /"bin":/);
-  assert.fileContent('package.json', /"bin": "cli.js"/);
-  assert.fileContent('package.json', /"meow"/);
+  assert.fileContent('package.json', "bin");
+  assert.fileContent('package.json', `"bin": {
+    "test": "cli.js"
+  }`);
+  assert.fileContent('package.json', "meow");
 });

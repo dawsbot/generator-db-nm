@@ -2,7 +2,6 @@
 const humanizeUrl = require('humanize-url');
 const yeoman = require('yeoman-generator');
 const _s = require('underscore.string');
-const fs = require('fs');
 
 module.exports = yeoman.Base.extend({
   init() {
@@ -20,10 +19,6 @@ module.exports = yeoman.Base.extend({
       name: 'description',
       message: 'What description do you want to use for your module?',
       default: 'descrr'
-    }, {
-      name: 'argLength',
-      message: 'How many args do you want your main function to have?',
-      default: 1
     }, {
       name: 'cli',
       message: 'Do you need a CLI?',
@@ -51,8 +46,7 @@ module.exports = yeoman.Base.extend({
         humanizedWebsite: humanizeUrl(website),
         cli: props.cli,
         appveyor: props.appveyor,
-        bundle: props.bundle,
-        argLength: props.argLength
+        bundle: props.bundle
       };
       const mv = (from, to) => {
         self.fs.move(self.destinationPath(from), self.destinationPath(to));
@@ -65,7 +59,7 @@ module.exports = yeoman.Base.extend({
 
       if (props.cli) {
         self.fs.copyTpl(self.templatePath('cli.js'), self.destinationPath('cli.js'), tpl);
-        //link cli
+        // link cli
         this.spawnCommandSync('npm link');
       }
 
