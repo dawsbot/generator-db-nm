@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo !app/templates && ava"
   },
   "files": [
     "app"
@@ -33,14 +33,12 @@
   ],
   "dependencies": {
     "humanize-url": "^1.0.1",
-    "json-minify": "^1.0.0",
     "normalize-url": "^1.2.0",
     "underscore.string": "^3.0.3",
     "yeoman-generator": "^0.22.1"
   },
   "devDependencies": {
     "ava": "*",
-    "eslint": "^1.10.3",
     "pify": "^2.2.0",
     "xo": "^0.15.1",
     "yeoman-assert": "^2.0.0",
