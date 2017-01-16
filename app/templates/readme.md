@@ -1,8 +1,7 @@
 # <%= moduleName %>
-[![npm version](https://img.shields.io/npm/v/<%= moduleName %>.svg)](https://www.npmjs.com/package/<%= moduleName %>)
-<% if (!appveyor) { %>[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
-<% } %>[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
-<% if (appveyor) { %>
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url]
+
+<% if (appveyor) { -%>
   <table>
     <thead>
       <tr>
@@ -21,7 +20,8 @@
       </tr>
     </tbody>
   </table>
-<% } %>
+<% } -%>
+
 > <%= description %>
 
 <% if (cli) { %>
@@ -109,3 +109,10 @@ Type: `string`
 ## License
 
 MIT © [Dawson Botsford](http://dawsonbotsford.com)
+
+[npm-image]: https://badge.fury.io/js/<%= moduleName %>.svg
+[npm-url]: https://npmjs.org/package/<%= moduleName %>
+[travis-image]: https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master
+[travis-url]: https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>
+[xo-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg
+[xo-url]: https://github.com/sindresorhus/xo
