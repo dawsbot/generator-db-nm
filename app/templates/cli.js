@@ -22,4 +22,4 @@ const cli = meow(
 
 updateNotifier({pkg: cli.pkg}).notify();
 
-console.log(<%= camelModuleName %>(cli.input[0] || 'unicorns'));
+console.log(<%= camelModuleName %>(cli.input[0]));
