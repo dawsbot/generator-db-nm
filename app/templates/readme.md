@@ -1,6 +1,5 @@
 # <%= moduleName %>
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url]
-
 <% if (appveyor) { -%>
   <table>
     <thead>
@@ -21,7 +20,6 @@
     </tbody>
   </table>
 <% } -%>
-
 > <%= description %>
 
 <% if (cli) { %>
@@ -92,19 +90,21 @@ Alternatively, you can install the browser bundle and reference it in `node_modu
 ```html
 <script src="<path to node_modules>/node_modules/<%= moduleName %>/bundle.js"></script>
 ```
-<% } %>
+<% } -%>
 
 ## API
 
 ### <%= camelModuleName %>(target)
 
-#### target
+#### Arguments
 
-Type: `string`
+| Name    | Description                     |   Type   |  Default  |
+| ------- | ------------------------------- | -------- |  -------  |
+| target  | Object to split value's of      | `object` |   None    |
 
-#### returns
+#### Returns
 
-Type: `string`
+Type: `object`
 
 ## License
 
