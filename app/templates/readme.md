@@ -1,25 +1,6 @@
 # <%= moduleName %>
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url]
-<% if (appveyor) { -%>
-  <table>
-    <thead>
-      <tr>
-        <th>Linux & OSX</th>
-        <th>Windows</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center">
-          <a href="https://travis-ci.org/dawsonbotsford/<%= moduleName %>"><img src="https://api.travis-ci.org/dawsonbotsford/<%= moduleName %>.svg?branch=master"></a>
-        </td>
-        <td align="center">
-          <a href="https://ci.appveyor.com/project/dawsonbotsford/<%= moduleName %>"><img src="http://www.gravatar.com/avatar/5f66f56cae930eb9ab2cd9e62b8285e6"></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-<% } -%>
+
 > <%= description %>
 
 <% if (cli) { %>

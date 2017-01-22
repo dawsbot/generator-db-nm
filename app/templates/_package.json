@@ -33,14 +33,8 @@
     "bundle.js"<% } %>
   ],
   "keywords": [<% if (cli) { %>
-    "cli-app",
-    "cli",<% } %><% if (appveyor) { %>
-    "windows",<% } %><% if (bundle) { %>
-    "bundled",
+    "cli",<% } %><% if (bundle) { %>
     "web-ready",<% } %>
-    "documented",
-    "tested",
-    "licensed",
     "dawson"
   ],
   "dependencies": {<% if (cli) { %>
