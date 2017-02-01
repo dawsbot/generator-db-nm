@@ -1,9 +1,9 @@
 # <%= moduleName %>
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url]
 
-> <%= description %>
+> <%= description -%>
 
-<% if (cli) { %>
+<% if (cli) { -%>
 # CLI
 
 ## Install
@@ -59,7 +59,7 @@ const <%= camelModuleName %> = require('<%= moduleName %>');
 #### Web
 
 ```html
-<script src="https://rawgit.com/dawsonbotsford/<%= moduleName %>/master/bundle.js"></script>
+<script src="https://rawgit.com/<%= githubUsername %>/<%= moduleName %>/master/bundle.js"></script>
 <script>
   alert(<%= camelModuleName %>('hackathons'));
   //=> 'hackathons'
