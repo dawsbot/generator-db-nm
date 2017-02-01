@@ -1,4 +1,4 @@
 'use strict';
-module.exports = function (replaceMe) {
+module.exports = replaceMe => {
   return replaceMe;
 };

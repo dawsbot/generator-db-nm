@@ -7,7 +7,7 @@ module.exports = yeoman.Base.extend({
   init() {
     const cb = this.async();
     const self = this;
-    const githubUsername = 'dawsonbotsford';
+    const githubUsername = 'dawsbot';
     const website = 'http://dawsonbotsford.com';
 
     this.prompt([{
