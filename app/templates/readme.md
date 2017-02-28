@@ -1,5 +1,5 @@
 # <%= moduleName %>
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url] ![][node-version-image]
 
 > <%= description -%>
 
@@ -97,3 +97,4 @@ MIT © [Dawson Botsford](http://dawsonbotsford.com)
 [travis-url]: https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>
 [xo-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg
 [xo-url]: https://github.com/sindresorhus/xo
+[node-version-image]: https://img.shields.io/badge/Node-%3E%3Dv4.0.0-ff69b4.svg
