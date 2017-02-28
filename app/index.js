@@ -70,6 +70,6 @@ module.exports = yeoman.Base.extend({
     this.spawnCommandSync('git', ['init']);
   },
   install() {
-    this.installDependencies({bower: false});
+    this.spawnCommandSync('yarn');
   }
 });
