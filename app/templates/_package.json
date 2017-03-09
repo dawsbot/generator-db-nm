@@ -23,19 +23,14 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "xo && ava"<% if (bundle) { %>,
-    "bundle": "browserify index.js -s <% camelModuleName %> -t [ babelify --presets [ es2015 ] ] | uglifyjs > bundle.js",
-    "precommit": "npm test && npm run bundle "<% } %>
+    "test": "xo && ava"
   },
   "files": [
     "index.js"<% if (cli) { %>,
-    "cli.js"<% } if (bundle) { %>,
-    "bundle.js"<% } %>
+    "cli.js"<% } %>
   ],
   "keywords": [<% if (cli) { %>
-    "cli",<% } %><% if (bundle) { %>
-    "web-ready",<% } %>
-    "dawson"
+    "cli"<% } %>
   ],
   "dependencies": {<% if (cli) { %>
     "meow": "^3.7.0",
@@ -43,11 +38,7 @@
   <% } %>},
   "devDependencies": {
     "ava": "^0.18.2",
-    "xo": "^0.17.1"<% if (bundle) { %>,
-    "uglify-js": "^2.6.2",
-    "babel-preset-es2015": "^6.6.0",
-    "babelify": "^7.2.0",
-    "browserify": "^13.0.0"<% } %>
+    "xo": "^0.17.1"
   },
   "xo": {
     "space": true

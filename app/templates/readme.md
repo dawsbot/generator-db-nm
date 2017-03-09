@@ -9,7 +9,7 @@
 ## Install
 
 ```sh
-$ npm install --global <%= moduleName %>
+$ yarn add global <%= moduleName %>
 ```
 
 ## Usage
@@ -39,39 +39,17 @@ $ <%= moduleName %> --help
 ## Install
 
 ```
-npm install --save <%= moduleName %>
+yarn add <%= moduleName %>
 ```
 
 ## Usage
-<% if(bundle) {%>
-#### Node
-
-<% } -%>
 
 ```js
 const <%= camelModuleName %> = require('<%= moduleName %>');
 
-<%= camelModuleName %>('hackathons');
-//=> 'hackathons'
+<%= camelModuleName %>('');
+//=> ''
 ```
-<% if(bundle) { -%>
-
-#### Web
-
-```html
-<script src="https://rawgit.com/<%= githubUsername %>/<%= moduleName %>/master/bundle.js"></script>
-<script>
-  alert(<%= camelModuleName %>('hackathons'));
-  //=> 'hackathons'
-</script>
-```
-
-Alternatively, you can install the browser bundle and reference it in `node_modules`
-
-```html
-<script src="<path to node_modules>/node_modules/<%= moduleName %>/bundle.js"></script>
-```
-<% } -%>
 
 ## API
 
@@ -81,7 +59,7 @@ Alternatively, you can install the browser bundle and reference it in `node_modu
 
 | Name    | Description                     |   Type   |  Default  |
 | ------- | ------------------------------- | -------- |  -------  |
-| target  | Object to split value's of      | `object` |   None    |
+| target  | Object to split value's of      | `string` |   None    |
 
 #### Returns
 
