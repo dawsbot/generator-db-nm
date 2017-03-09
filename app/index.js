@@ -24,11 +24,6 @@ module.exports = yeoman.Base.extend({
       message: 'Do you need a CLI?',
       type: 'confirm',
       default: false
-    }, {
-      name: 'bundle',
-      message: 'Create a web bundle?',
-      type: 'confirm',
-      default: false
     }], props => {
       const tpl = {
         moduleName: props.moduleName,
@@ -39,8 +34,7 @@ module.exports = yeoman.Base.extend({
         email: self.user.git.email(),
         website: website,
         humanizedWebsite: humanizeUrl(website),
-        cli: props.cli,
-        bundle: props.bundle
+        cli: props.cli
       };
       const mv = (from, to) => {
         self.fs.move(self.destinationPath(from), self.destinationPath(to));
