@@ -8,7 +8,7 @@ module.exports = yeoman.Base.extend({
     const cb = this.async();
     const self = this;
     const githubUsername = 'dawsbot';
-    const website = 'http://dawsonbotsford.com';
+    const website = 'https://dawsonbotsford.com';
 
     this.prompt([{
       name: 'moduleName',
@@ -62,6 +62,7 @@ module.exports = yeoman.Base.extend({
   },
   git() {
     this.spawnCommandSync('git', ['init']);
+    this.spawnCommandSync('git branch --set-upstream-to origin/master');
   },
   install() {
     this.spawnCommandSync('yarn');
