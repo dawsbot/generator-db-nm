@@ -1,5 +1,5 @@
 # <%= moduleName %>
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![XO code style][xo-image]][xo-url] ![][node-version-image]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] ![][node-version-image]
 
 > <%= description -%>
 
@@ -9,7 +9,7 @@
 ## Install
 
 ```sh
-$ yarn add global <%= moduleName %>
+$ yarn global add <%= moduleName %>
 ```
 
 ## Usage
