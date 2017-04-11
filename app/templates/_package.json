@@ -37,7 +37,7 @@
     "update-notifier": "^1.0.2"
   <% } %>},
   "devDependencies": {
-    "ava": "^0.18.2",
+    "ava": "^0.19.1",
     "xo": "^0.17.1"
   },
   "xo": {
